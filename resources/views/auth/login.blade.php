@@ -31,19 +31,23 @@
         <form action="{{ route('login') }}" method="POST">
           @csrf
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Masukkan Email"
-              value="{{ old('email') }}">
-            @error('email')
-              <span class="text-danger fs-6">{{ $message }}</span>
-            @enderror
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email"
+                value="{{ old('email') }}">
+              @error('email')
+                <span class="text-danger fs-6">{{ $message }}</span>
+              @enderror
+            </div>
 
-            <label for="password">Password</label>
-            <input type="password" class="form-control mb-3" id="password" name="password"
-              placeholder="Masukkan Password">
-            {{-- @error('password')
-              <span class="text-danger fs-6">{{ $message }}</span>
-            @enderror --}}
+            <div class="mb-3">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password"
+                placeholder="Masukkan Password">
+              {{-- @error('password')
+                <span class="text-danger fs-6">{{ $message }}</span>
+              @enderror --}}
+            </div>
 
             <div class="gap-2">
               <button type="submit" class="btn btn-primary me-2">Login</button>

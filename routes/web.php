@@ -19,9 +19,16 @@ Route::middleware('auth')->group(function () {
         return view('home');
     });
 
-    Route::get('/dashboard', function () {
-        return view('dashboard');
+    Route::prefix('panel')->name('panel.')->group(function () {
+        Route::get('/', function () {
+            return view('dashboard');
+        })->name('dashboard');
+
+        Route::get('/franchise', function () {
+            return view('dashboard');
+        })->name('franchise');
     });
+
 
     Route::get('/seller/pesanan', function () {
         return view('pesanan.kelola');
