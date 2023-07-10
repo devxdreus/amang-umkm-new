@@ -14,68 +14,63 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::middleware('auth')->group(function () {
+    Route::get('/', function () {
+        return view('home');
+    });
+
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    });
+
+    Route::get('/seller/pesanan', function () {
+        return view('pesanan.kelola');
+    });
+
+    Route::get('/seller/pesanan/riwayat', function () {
+        return view('pesanan.riwayat');
+    });
+
+    Route::get('/franchise/tambah', function () {
+        return view('franchise.tambah');
+    });
+
+    Route::get('/form_mitra', function () {
+        return view('form.form_mitra');
+    });
+
+    Route::get('/list_merchant', function () {
+        return view('home.list_merchant');
+    });
+
+    Route::get('/profile', function () {
+        return view('home.profile');
+    });
+
+    Route::get('/contact', function () {
+        return view('home.contact');
+    });
+
+    Route::get('/about', function () {
+        return view('home.about');
+    });
+
+    Route::get('/product_detail', function () {
+        return view('productDetails.product_detail');
+    });
+
+    Route::get('/checkout_confirm', function () {
+        return view('productDetails.checkout_confirm');
+    });
+
+    Route::get('/checkout', function () {
+        return view('productDetails.checkout');
+    });
+
+    Route::get('/mitra_confirm', function () {
+        return view('productDetails.mitra_confirm');
+    });
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::get('/seller/pesanan', function () {
-    return view('pesanan.kelola');
-});
-
-Route::get('/seller/pesanan/riwayat', function () {
-    return view('pesanan.riwayat');
-});
-
-Route::get('/franchise/tambah', function () {
-    return view('franchise.tambah');
-});
-
-Route::get('/signin', function () {
-    return view('form.signin');
-});
-
-Route::get('/signup', function () {
-    return view('form.signup');
-});
-
-Route::get('/form_mitra', function () {
-    return view('form.form_mitra');
-});
-
-Route::get('/list_merchant', function () {
-    return view('home.list_merchant');
-});
-
-Route::get('/profile', function () {
-    return view('home.profile');
-});
-
-Route::get('/contact', function () {
-    return view('home.contact');
-});
-
-Route::get('/about', function () {
-    return view('home.about');
-});
-
-Route::get('/product_detail', function () {
-    return view('productDetails.product_detail');
-});
-
-Route::get('/checkout_confirm', function () {
-    return view('productDetails.checkout_confirm');
-});
-
-Route::get('/checkout', function () {
-    return view('productDetails.checkout');
-});
-
-Route::get('/mitra_confirm', function () {
-    return view('productDetails.mitra_confirm');
-});
 
 require __DIR__ . '/auth.php';
