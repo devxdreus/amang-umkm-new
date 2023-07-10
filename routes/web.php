@@ -70,6 +70,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/mitra_confirm', function () {
         return view('productDetails.mitra_confirm');
     });
+
+    Route::get('/edit_profile', function () {
+        return view('home.edit_profile');
+    });
+
+    Route::get('/syarat_ketentuan', function () {
+        return view('form.syarat');
+    });
 });
 
 

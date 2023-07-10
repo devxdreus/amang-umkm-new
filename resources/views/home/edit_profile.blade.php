@@ -21,29 +21,27 @@
                   <div class="col">
                     <div class="card">
                       <div class="card-body">
-                        <h4 class="card-title text-center mb-3">Profil</h4>
+                        <h4 class="card-title text-center mb-3">Edit Profil</h4>
                         <div class="text-center">
                           <img src="https://i.postimg.cc/PrcNMT3n/Group-2.png" class="rounded" alt="..." width="180px" height="180px"/>
                         </div>
-                        <br />
-                        <div class="text-center">
-                          <b class="d-inline">Nama:</b>
-                          <p class="d-inline">Muhammad Fulan</p>
-                        </div>
-                        <br />
-                        <div class="text-center">
-                          <b class="d-inline">Email:</b>
-                          <p class="d-inline">fulan123@gmail.com</p>
-                        </div>
-                        <br />
-                        <div class="text-center">
-                            <a href="{{url('/edit_profile')}}" class="btn btn-dark">Edit Profil</a>
-                          <a href="#" class="btn btn-dark">Edit Detail Bisnis</a>
-                        </div>
-                        <br />
-                        <div class="d-grid gap-2 col-8 mx-auto">
-                          <a href="#" class="btn btn-danger">Log out</a>
-                        </div>
+                        <form>
+                          <div class="mb-3">
+                            <label for="editNama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="editNama" />
+                          </div>
+                          <div class="mb-3">
+                            <label for="editEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editEmail" />
+                          </div>
+                          <br />
+                          <div class="text-center">
+                            <button type="button" class="btn btn-dark">Edit</button>
+                            <button type="button" class="btn btn-outline-dark">
+                              Batal
+                            </button>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -51,7 +49,7 @@
                 </div>
               </div>
             </div>
-          </main>
+          </main>
 
         @include('partials._footer')
 
