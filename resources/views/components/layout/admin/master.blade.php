@@ -4,7 +4,7 @@
 
 <head>
   <base href="../">
-  <title>Amang UMKM</title>
+  <title>{{ $title }} | Amang UMKM</title>
   <meta charset="utf-8" />
   <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
   <link rel="shortcut icon" href="{{ asset('media/logos/favicon.ico') }}" />
@@ -30,7 +30,7 @@
     <!--begin::Page-->
     <div class="page d-flex flex-row flex-column-fluid">
       <!--begin::Aside-->
-      <x-layout.admin.aside />
+      <x-layout.admin.aside :menu="$title" />
       <!--end::Aside-->
       <!--begin::Wrapper-->
       <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">

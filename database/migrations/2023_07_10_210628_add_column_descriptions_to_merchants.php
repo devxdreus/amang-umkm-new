@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('role_id')->default(3)->constrained();
+        Schema::table('merchants', function (Blueprint $table) {
+            $table->string('slug')->unique();
+            $table->string('description');
         });
     }
 
@@ -25,8 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('role_id');
+        Schema::table('merchants', function (Blueprint $table) {
+            $table->dropColumn('slug');
+            $table->dropColumn('description');
         });
     }
 };

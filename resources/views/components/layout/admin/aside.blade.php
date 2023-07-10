@@ -12,7 +12,7 @@
       <!--begin::Menu-->
       <div class="menu menu-column menu-rounded fw-bold" id="#kt_aside_menu" data-kt-menu="true">
         <div class="menu-item">
-          <a class="menu-link" href="{{ route('panel.dashboard') }}">
+          <a class="menu-link {{ $menu == 'Dashboard' ? 'active' : '' }}" href="{{ route('panel.dashboard') }}">
             <span class="menu-icon">
               <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
               <span class="svg-icon svg-icon-5">
@@ -40,16 +40,16 @@
               </span>
               <!--end::Svg Icon-->
             </span>
-            <span class="menu-title">Franchise</span>
+            <span class="menu-title">Merchant</span>
             <span class="menu-arrow"></span>
           </span>
           <div class="menu-sub menu-sub-accordion">
             <div class="menu-item">
-              <a class="menu-link" href="/franchise/tambah">
+              <a class="menu-link" href="{{ route('panel.merchants') }}">
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>
                 </span>
-                <span class="menu-title">Tambah usaha</span>
+                <span class="menu-title">Detail Usaha</span>
               </a>
             </div>
             <div class="menu-item">
@@ -57,7 +57,7 @@
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>
                 </span>
-                <span class="menu-title">Kelola Usaha</span>
+                <span class="menu-title">Tambah Package</span>
               </a>
             </div>
           </div>

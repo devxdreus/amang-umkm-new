@@ -23,9 +23,6 @@
             <a class="nav-link" aria-current="page" href="{{ url('/') }}" style="font-weight: bold;">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{ url('profile') }}" style="font-weight: bold;">Profile</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="{{ url('contact') }}" style="font-weight: bold;">Contact</a>
           </li>
           <li class="nav-item">
@@ -38,8 +35,8 @@
             <a class="dropdown-toggle" href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="https://i.postimg.cc/rsg2HPm6/Group-1.png"></a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Profil</a></li>
-              <li><a class="dropdown-item" href="#">Dashboard Mitra</a></li>
+              <li><a class="dropdown-item" href="{{ url('profile') }}">Profil</a></li>
+              <li><a class="dropdown-item" href="{{ route('panel.dashboard') }}">Dashboard Mitra</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
