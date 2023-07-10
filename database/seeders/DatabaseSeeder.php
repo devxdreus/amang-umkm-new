@@ -33,12 +33,12 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        // User::create([
-        //     'name' => 'admin',
-        //     'email' => 'admin@mail.com',
-        //     'password' => '12345678',
-        //     'role_id' => 1
-        // ]);
+        User::create([
+            'name' => 'admin',
+            'email' => 'admin@mail.com',
+            'password' => '12345678',
+            'role_id' => 1
+        ]);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
