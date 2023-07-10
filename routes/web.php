@@ -78,6 +78,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/syarat_ketentuan', function () {
         return view('form.syarat');
     });
+    
+    Route::get('/edit_bisnis', function () {
+        return view('home.edit_bisnis');
+    });
 });
 
 
