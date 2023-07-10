@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'admin',
             'email' => 'admin@mail.com',
-            'password' => '12345678',
+            'password' => '$2y$10$ign0/uMltX24/PgW7Xufo.rpfI0tcaFDXKFf.W2qev12NxqAZH4Sa', //12345678
             'role_id' => 1
         ]);
         // \App\Models\User::factory(10)->create();
