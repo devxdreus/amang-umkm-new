@@ -22,13 +22,13 @@
             style="width: 15px; height: 30px"
             class="bg-primary d-inline-block me-3 rounded"
           ></div>
-          <span class="text-primary fw-bold">Menjadi Mitra Kami</span>
+          <span class="text-primary fw-bold">Edit Detail Bisnis</span>
         </div>
         <br /><br />
         <form class="row g-3">
           <div class="col-md-6">
             <label for="namaBisnis" class="form-label">Nama Bisnis</label>
-            <input type="text" class="form-control" id="namaBisnis" required />
+            <input type="text" class="form-control" id="namaBisnis" />
           </div>
           <div class="col-md-6">
             <label for="tahunAwal" class="form-label"
@@ -39,14 +39,14 @@
               class="form-control"
               id="tahunAwal"
               placeholder="DD/Month/YY"
-              required
+            
             />
           </div>
           <div class="col-md-6">
             <label for="usernameIG" class="form-label"
               >Username Instagram</label
             >
-            <input type="text" class="form-control" id="usernameIG" required />
+            <input type="text" class="form-control" id="usernameIG" />
           </div>
           <div class="col-md-6">
             <label for="jumlahOutlet" class="form-label">Jumlah Outlet</label>
@@ -54,7 +54,7 @@
               type="number"
               class="form-control"
               id="jumlahOutlet"
-              required
+            
             />
           </div>
           <div class="col-md-6">
@@ -65,7 +65,7 @@
               type="text"
               class="form-control"
               id="namaPJBisnis"
-              required
+            
             />
           </div>
           <div class="col-md-6">
@@ -77,7 +77,7 @@
               class="form-control"
               id="areaJangkauan"
               placeholder="Kalimantan, Jawa, Sumatera, dll."
-              required
+            
             />
           </div>
           <div class="col-md-6">
@@ -88,7 +88,7 @@
               type="text"
               class="form-control"
               id="kontakPJBisnis"
-              required
+            
             />
           </div>
           <div class="col-md-6">
@@ -99,7 +99,7 @@
               type="text"
               class="form-control"
               id="rataRataKotor"
-              required
+            
             />
           </div>
           <div class="col-md-6">
@@ -108,7 +108,7 @@
               type="email"
               class="form-control"
               id="emailBisnis"
-              required
+            
             />
           </div>
           <div class="col-md-6">
@@ -119,7 +119,7 @@
               type="text"
               class="form-control"
               id="rataRataBersih"
-              required
+            
             />
           </div>
           <div class="col-md-6">
@@ -129,12 +129,15 @@
             <select
               class="form-select"
               aria-label="Default select example"
-              required
+            
             >
-              <option selected>Kategori</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option selected>-</option>
+              <option value="1">Food & Beverages</option>
+              <option value="2">Fashion</option>
+              <option value="3">Elektronik</option>
+              <option value="4">Kesehatan</option>
+              <option value="5">Kecantikan</option>
+              <option value="6">Olahraga</option>
             </select>
           </div>
           <div class="col-md-6">
@@ -143,7 +146,7 @@
               type="file"
               class="form-control"
               id="kontrak"
-              required
+            
               accept=".pdf"
               placeholder="PDF"
             />
@@ -153,18 +156,11 @@
               type="checkbox"
               class="form-check-input"
               id="exampleCheck1"
-              required
+            
             />
-            <label class="form-check-label" for="exampleCheck1"
-              >Menyetuji Syarat & Ketentuan yang ditetapkan oleh Amang
-              UMKM.</label
-            >
-            <div class="invalid-feedback">
-              Kamu harus menyetujui syarat & ketentuan sebelum mengirim.
-            </div>
           </div>
           <div class="col-12">
-            <a href="{{url('/mitra_confirm')}}"><button type="button" class="btn btn-primary">Kirim</button></a>
+            <a href="{{url('/mitra_confirm')}}"><button type="button" class="btn btn-primary">Edit</button></a>
             <a href="{{url('/')}}"><button type="button" class="btn btn-outline-dark">Batal</button></a>
           </div>
         </form>
