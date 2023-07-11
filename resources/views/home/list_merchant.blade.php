@@ -8,55 +8,55 @@
                 </div>
                 <h3>All Merchant</h3>
                 <div class="d-flex justify-content-between mt-4">
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/SRQcdk19/sedang-Tren1.png"></div>
                     </a>
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/8C5826FX/Cart.png"></div>
                     </a>
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/9f3TSGNC/sedang-Tren2.png"></div>
                     </a>
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/RZtJcWC8/sedang-Tren4.png"></div>
                     </a>
                 </div>
                 <div class="d-flex justify-content-between mt-4">
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/9f3TSGNC/sedang-Tren2.png"></div>
                     </a>
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/RZtJcWC8/sedang-Tren4.png"></div>
                     </a>
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/8C5826FX/Cart.png"></div>
                     </a>
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/SRQcdk19/sedang-Tren1.png"></div>
                     </a>
                 </div>
                 <div class="d-flex justify-content-between mt-4">
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/8C5826FX/Cart.png"></div>
                     </a>
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/SRQcdk19/sedang-Tren1.png"></div>
                     </a>
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/RZtJcWC8/sedang-Tren4.png"></div>
                     </a>
-                    <a href="{{ url('/product_detail') }}">
+                    <a href="{{ route('product') }}">
                         <div style="width: 270px; height: 250px" class="bg-light border"><img
                                 src="https://i.postimg.cc/9f3TSGNC/sedang-Tren2.png"></div>
                     </a>
