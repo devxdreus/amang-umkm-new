@@ -11,7 +11,7 @@
                                 <img src="https://i.postimg.cc/PrcNMT3n/Group-2.png" class="rounded" alt="..."
                                     width="180px" height="180px" />
                             </div>
-                            <form>
+                            <form action="{{ route('profile') }}">
                                 <div class="mb-3">
                                     <label for="editNama" class="form-label">Nama</label>
                                     <input type="text" class="form-control" id="editNama" />
@@ -22,10 +22,11 @@
                                 </div>
                                 <br />
                                 <div class="text-center">
-                                    <button type="button" class="btn btn-dark">Edit</button>
-                                    <button type="button" class="btn btn-outline-dark">
-                                        Batal
-                                    </button>
+                                    <button type="submit" class="btn btn-dark">Edit</button>
+                                    <a href="{{ route('profile') }}"><button type="button"
+                                            class="btn btn-outline-dark">
+                                            Batal
+                                        </button></a>
                                 </div>
                             </form>
                         </div>
