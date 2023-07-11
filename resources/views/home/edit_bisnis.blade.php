@@ -64,8 +64,8 @@
                 <input type="file" class="form-control" id="kontrak" accept=".pdf" placeholder="PDF" />
             </div>
             <div class="col-12">
-                <a href="{{ url('/mitra_confirm') }}"><button type="button" class="btn btn-primary">Edit</button></a>
-                <a href="{{ url('/') }}"><button type="button" class="btn btn-outline-dark">Batal</button></a>
+                <a href="{{ route('profile') }}"><button type="button" class="btn btn-primary">Edit</button></a>
+                <a href="{{ route('profile') }}"><button type="button" class="btn btn-outline-dark">Batal</button></a>
             </div>
         </form>
     </div>

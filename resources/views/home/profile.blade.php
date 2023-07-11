@@ -22,8 +22,8 @@
                         </div>
                         <br />
                         <div class="text-center">
-                            <a href="{{ url('/edit_profile') }}" class="btn btn-primary">Edit Profil</a>
-                            <a href="{{ url('/edit_bisnis') }}" class="btn btn-primary">Edit Detail Bisnis</a>
+                            <a href="{{ route('edit-profile') }}" class="btn btn-primary">Edit Profil</a>
+                            <a href="{{ route('edit-bisnis') }}" class="btn btn-primary">Edit Detail Bisnis</a>
                         </div>
                         <br />
                         <div class="d-grid gap-2 col-8 mx-auto">

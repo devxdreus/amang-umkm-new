@@ -65,7 +65,7 @@
             </div>
             <div class="col-12">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required />
-                <label class="form-check-label" for="exampleCheck1"><a href="{{ url('/syarat_ketentuan') }}"
+                <label class="form-check-label" for="exampleCheck1"><a href="{{ route('syarat-ketentuan') }}"
                         class="nav-link">Menyetujui Syarat & Ketentuan yang ditetapkan oleh Amang
                         UMKM.</a></label>
                 <div class="invalid-feedback">
@@ -74,7 +74,7 @@
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Kirim</button>
-                <button type="button" class="btn btn-outline-dark">Batal</button>
+                <a href="#"><button type="button" class="btn btn-outline-dark">Batal</button></a>
             </div>
         </form>
     </div>
