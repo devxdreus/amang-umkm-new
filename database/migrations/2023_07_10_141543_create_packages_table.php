@@ -17,10 +17,9 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('benefit');
-            $table->string('detail');
+            $table->text('benefit');
+            $table->text('description');
             $table->bigInteger('price');
-            $table->integer('order');
             $table->foreignId('merchant_id')->constrained();
 
             $table->timestamps();

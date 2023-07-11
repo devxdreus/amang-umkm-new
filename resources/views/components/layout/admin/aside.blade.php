@@ -53,11 +53,11 @@
               </a>
             </div>
             <div class="menu-item">
-              <a class="menu-link" href="../../demo10/dist/index.html">
+              <a class="menu-link" href="{{ route('panel.packages.index') }}">
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>
                 </span>
-                <span class="menu-title">Tambah Package</span>
+                <span class="menu-title">Paket Usaha</span>
               </a>
             </div>
           </div>
@@ -157,10 +157,12 @@
         <!--begin::User info-->
         <div class="ms-2">
           <!--begin::Name-->
-          <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder lh-1">M. Abdillah</a>
+          <a href="#"
+            class="text-gray-800 text-hover-primary fs-6 fw-bolder lh-1">{{ auth()->user()->name }}</a>
           <!--end::Name-->
           <!--begin::Major-->
-          <span class="text-muted fw-bold d-block fs-7 lh-1">Seller lv1</span>
+          <span
+            class="text-muted fw-bold d-block fs-7 lh-1">{{ ucwords(auth()->user()->role()->first()->name) }}</span>
           <!--end::Major-->
         </div>
         <!--end::User info-->

@@ -7,7 +7,10 @@
   <title>{{ $title }} | Amang UMKM</title>
   <meta charset="utf-8" />
   <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-  <link rel="shortcut icon" href="{{ asset('media/logos/favicon.ico') }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('media/logos/apple-touch-icon.png') }} ">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('media/logos/favicon-32x32.png') }} ">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('media/logos/favicon-16x16.png') }} ">
+  <link rel="manifest" href="{{ asset('media/logos/site.webmanifest') }} ">
   <!--begin::Fonts-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
   <!--end::Fonts-->
@@ -46,7 +49,7 @@
               <!--begin::Page title-->
               <div class="page-title d-flex flex-column me-5 py-2">
                 <!--begin::Title-->
-                <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0">{{ $title }}</h1>
+                <h1 class="d-flex flex-column text-dark fw-bolder fs-1 mb-0">{{ $title }}</h1>
                 <!--end::Title-->
               </div>
               <!--end::Page title-->
@@ -94,9 +97,9 @@
   <!--end::Scrolltop-->
 
   <!--begin::Javascript-->
-  <script>
-    var hostUrl = "assets/";
-  </script>
+
+
+
   <!--begin::Global Javascript Bundle(used by all pages)-->
   <script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
   <script src="{{ asset('js/scripts.bundle.js') }}"></script>
@@ -113,6 +116,57 @@
   <script src="{{ asset('js/custom/utilities/modals/create-campaign.js') }}"></script>
   <script src="{{ asset('js/custom/utilities/modals/create-app.js') }}"></script>
   <script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
+  <script>
+    var hostUrl = "assets/";
+
+    @if (session()->has('success'))
+      Swal.fire({
+        text: "{{ session('success') }}",
+        icon: "success",
+        buttonsStyling: false,
+        confirmButtonText: "Ok",
+        customClass: {
+          confirmButton: "btn btn-primary"
+        }
+      });
+    @endif
+
+    @if (session()->has('error'))
+      Swal.fire({
+        text: "{{ session('error') }}",
+        icon: "error",
+        buttonsStyling: false,
+        confirmButtonText: "Ok",
+        customClass: {
+          confirmButton: "btn btn-primary"
+        }
+      });
+    @endif
+
+    @if (session()->has('warning'))
+      Swal.fire({
+        text: "{{ session('warning') }}",
+        icon: "warning",
+        buttonsStyling: false,
+        confirmButtonText: "Ok",
+        customClass: {
+          confirmButton: "btn btn-primary"
+        }
+      });
+    @endif
+
+    @if (session()->has('info'))
+      Swal.fire({
+        text: "{{ session('info') }}",
+        icon: "info",
+        buttonsStyling: false,
+        confirmButtonText: "Ok",
+        customClass: {
+          confirmButton: "btn btn-primary"
+        }
+      });
+    @endif
+  </script>
   <!--end::Page Custom Javascript-->
   <!--end::Javascript-->
 </body>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Merchant;
+use App\Http\Controllers\Package;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -86,6 +87,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [Dashboard::class, 'index'])->name('dashboard');
 
         Route::get('/merchants', [Merchant::class, 'index'])->name('merchants');
+        Route::resource('/merchants/packages', Package::class)->names('packages');
     });
 });
 
