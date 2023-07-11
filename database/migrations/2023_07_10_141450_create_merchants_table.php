@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('username');
+            $table->string('instagram');
+            $table->string('slug')->unique();
+            $table->text('description');
             $table->string('pic');
             $table->string('contact');
             $table->string('email');

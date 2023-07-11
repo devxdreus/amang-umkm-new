@@ -12,7 +12,7 @@
       <!--begin::Menu-->
       <div class="menu menu-column menu-rounded fw-bold" id="#kt_aside_menu" data-kt-menu="true">
         <div class="menu-item">
-          <a class="menu-link" href="{{ url('dashboard') }}">
+          <a class="menu-link {{ $menu == 'Dashboard' ? 'active' : '' }}" href="{{ route('panel.dashboard') }}">
             <span class="menu-icon">
               <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
               <span class="svg-icon svg-icon-5">
@@ -40,24 +40,24 @@
               </span>
               <!--end::Svg Icon-->
             </span>
-            <span class="menu-title">Franchise</span>
+            <span class="menu-title">Merchant</span>
             <span class="menu-arrow"></span>
           </span>
           <div class="menu-sub menu-sub-accordion">
             <div class="menu-item">
-              <a class="menu-link" href="/franchise/tambah">
+              <a class="menu-link" href="{{ route('panel.merchants') }}">
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>
                 </span>
-                <span class="menu-title">Tambah usaha</span>
+                <span class="menu-title">Detail Usaha</span>
               </a>
             </div>
             <div class="menu-item">
-              <a class="menu-link" href="../../demo10/dist/index.html">
+              <a class="menu-link" href="{{ route('panel.packages.index') }}">
                 <span class="menu-bullet">
                   <span class="bullet bullet-dot"></span>
                 </span>
-                <span class="menu-title">Kelola Usaha</span>
+                <span class="menu-title">Paket Usaha</span>
               </a>
             </div>
           </div>
@@ -157,10 +157,12 @@
         <!--begin::User info-->
         <div class="ms-2">
           <!--begin::Name-->
-          <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder lh-1">M. Abdillah</a>
+          <a href="#"
+            class="text-gray-800 text-hover-primary fs-6 fw-bolder lh-1">{{ auth()->user()->name }}</a>
           <!--end::Name-->
           <!--begin::Major-->
-          <span class="text-muted fw-bold d-block fs-7 lh-1">Seller lv1</span>
+          <span
+            class="text-muted fw-bold d-block fs-7 lh-1">{{ ucwords(auth()->user()->role()->first()->name) }}</span>
           <!--end::Major-->
         </div>
         <!--end::User info-->
