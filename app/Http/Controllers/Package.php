@@ -10,7 +10,7 @@ class Package extends Controller
 {
     public function index(Request $request)
     {
-        return view('panel.package.index', ['packages' => Merchant::find(auth()->id())->package()->orderBy('updated_at', 'asc')->get()]);
+        return view('panel.package.index', ['packages' => Merchant::where('user_id', auth()->id())?->first()?->package()?->orderBy('updated_at', 'asc')->get()]);
     }
 
     public function create()
@@ -27,7 +27,7 @@ class Package extends Controller
             'price' => 'required'
         ]);
 
-        $data['merchant_id'] = Merchant::find(auth()->id())->id;
+        $data['merchant_id'] = Merchant::where('user_id', auth()->id())->first()->id;
 
         ModelsPackage::insert($data);
 

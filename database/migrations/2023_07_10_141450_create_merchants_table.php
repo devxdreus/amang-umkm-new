@@ -18,12 +18,12 @@ return new class extends Migration
 
             $table->string('name');
             $table->string('instagram');
-            $table->string('slug')->unique();
+            $table->string('slug')->nullable();
             $table->text('description');
             $table->string('pic');
             $table->string('contact');
             $table->string('email');
-            $table->date('birth');
+            $table->date('birth')->nullable();
             $table->integer('outlet');
             $table->string('area');
             $table->bigInteger('gross_income');

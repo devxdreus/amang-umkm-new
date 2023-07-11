@@ -20,6 +20,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware('auth')->group(function () {
+
+    Route::prefix('panel')->name('panel.')->group(function () {
+        Route::get('/', [Dashboard::class, 'index'])->name('dashboard');
+        Route::get('/merchants', [Merchant::class, 'index'])->name('merchants');
+        Route::resource('/merchants/packages', Package::class)->names('packages');
+    });
+});
+
 Route::get('/seller/pesanan', function () {
     return view('pesanan.kelola');
 });
@@ -32,24 +41,16 @@ Route::get('/franchise/tambah', function () {
     return view('franchise.tambah');
 });
 
-Route::middleware('auth')->group(function () {
-
-    Route::prefix('panel')->name('panel.')->group(function () {
-        Route::get('/', [Dashboard::class, 'index'])->name('dashboard');
-        Route::get('/merchants', [Merchant::class, 'index'])->name('merchants');
-        Route::resource('/merchants/packages', Package::class)->names('packages');
-    });
-});
-
 Route::prefix('form')->group(function () {
     Route::get('/daftar-mitra', [Form::class, 'index'])->name('daftar-mitra');
+    Route::post('/daftar-mitra', [Merchant::class, 'store'])->name('merchant.store');
     Route::get('/mitra-confirm', [Form::class, 'confirm'])->name('mitra-confirm');
     Route::get('/syarat-ketentuan', [Form::class, 'syarat'])->name('syarat-ketentuan');
 });
 
-Route::prefix('home')->group(function () {
+Route::get('/', [Home::class, 'index'])->name('home');
 
-    Route::get('/', [Home::class, 'index'])->name('home');
+Route::prefix('home')->group(function () {
     Route::get('/contact', [Home::class, 'contact'])->name('contact');
     Route::get('/about', [Home::class, 'about'])->name('about');
     Route::get('/profile', [Home::class, 'profile'])->name('profile');
