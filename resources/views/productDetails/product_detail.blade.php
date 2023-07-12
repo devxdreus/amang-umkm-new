@@ -44,7 +44,7 @@
                             <hr>
                             <h4>Detail Bisnis:</h4>
                             <div>
-                                <p style="font-weight: 600">Media: <span>Kkuldak.id</span></p>
+                                <p style="font-weight: 600">Sosial Media: <span>Kkuldak.id</span></p>
                                 <p style="font-weight: 600">Sejak: <span>17 Juni 2004</span></p>
                                 <p style="font-weight: 600">Kategori: <span>Makanan & Minuman</span></p>
                                 <p style="font-weight: 600">Area Jangkauan: <span>Indonesia</span></p>
