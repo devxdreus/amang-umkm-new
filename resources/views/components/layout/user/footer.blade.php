@@ -30,10 +30,5 @@
                 <img class="ms-2" src="https://i.postimg.cc/Hnn66wVd/Vector.png">
             </p>
         </div>
-        <div class="col-2">
-            <span class="fs-5 fw-medium d-lg-inline-block mb-3">Menjadi Mitra</span><br>
-            <a href="{{ route('daftar-mitra') }}"><button class="btn btn-outline-light" type="button">Click
-                    Here</button></a>
-        </div>
     </div>
 </footer>
