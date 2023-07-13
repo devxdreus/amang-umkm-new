@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1>Detail Paket</h1>
+                    <h2>Detail Paket</h2>
                     <br />
                     <img class="justify-content-center mb-4" width="89%" height="30%"
                         src="https://i.postimg.cc/X7vvtzhx/image-68.png" alt="" />
@@ -19,11 +19,11 @@
                         </div>
                     </div>
                     <br />
-                    <h2>Detail Kontrak</h2>
+                    <h4>Detail Kontrak</h4>
                     <embed width="80%" height="300" src="surat.pdf" type="" />
                 </div>
                 <div class="col-lg-4">
-                    <h1>Data Franchisee</h1>
+                    <h2>Data Diri</h2>
                     <hr />
 
                     <form>
@@ -41,7 +41,7 @@
                             <div class="invalid-feedback">Please choose a username.</div>
                         </div>
                         <br />
-                        <h3>Pembayaran</h3>
+                        <h4>Pembayaran</h4>
                         <hr />
 
                         <ul class="list-group">
@@ -55,7 +55,7 @@
                             </li>
                         </ul>
                         <br />
-                        <h5>Bank:</h5>
+                        <h6>Bank:</h6>
                         <img class="img-fluid" src="https://i.postimg.cc/m2rj4yZs/bank.png" alt="" />
                         <div class="mb-3">
                             <label for="namaCC" class="form-label">Nama Bank</label>
